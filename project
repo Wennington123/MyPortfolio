@@ -1,0 +1,24 @@
+meu-portfolio/
+├── public/                 # Arquivos públicos e estáticos (favicon, robots.txt, etc.)
+│   └── images/             # Imagens estáticas gerais
+├── src/                    # Código-fonte principal da aplicação
+│   ├── assets/             # Arquivos de mídia (sua foto de perfil, ícones, currículo em PDF)
+│   ├── components/         # Componentes visuais reutilizáveis
+│   │   ├── Navbar/         # Barra de navegação
+│   │   ├── Footer/         # Rodapé
+│   │   ├── ProjectCard/    # Cartão para exibir cada projeto
+│   │   └── SkillBadge/     # Ícones/tags das suas habilidades
+│   ├── data/               # 💡 Onde colocaremos as suas informações!
+│   │   ├── about.js        # Seu resumo, biografia e links sociais
+│   │   ├── projects.js     # Lista de projetos (título, descrição, repo, link, tecnologias)
+│   │   └── skills.js       # Suas habilidades (ex: JavaScript, React, Python, Git)
+│   ├── pages/              # Páginas ou seções principais do site
+│   │   ├── Home/           # Hero section (aquela primeira tela de impacto)
+│   │   ├── About/          # Seção sobre você
+│   │   ├── Projects/       # Seção de portfólio/projetos
+│   │   └── Contact/        # Formulário ou links de contato
+│   ├── styles/             # Estilos globais (CSS, SCSS ou configurações do Tailwind)
+│   └── App.js / index.js   # Arquivo de entrada da aplicação
+├── .gitignore
+├── package.json            # Dependências do projeto
+└── README.md               # Documentação do seu repositório
