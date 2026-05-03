@@ -89,7 +89,7 @@ export const Home = () => {
             viewport={{ once: true }}
           >
             <div className="project-info">
-              <h3>Subsumer Edu (Game)</h3>
+              <h3>Memória Silábica (Game)</h3>
               <p>
                 No meu tempo livre, exploro o desenvolvimento de games pela plataforma Construct 3. Este projeto é um jogo educacional publicado na Google Play Store.
               </p>
@@ -125,7 +125,7 @@ export const Home = () => {
       </section>
 
       <section id="contato" className="contact-section">
-        <h2 className="section-title">Vamos Conversar?</h2>
+        <h2 className="section-title">Vamos conversar sobre projetos?</h2>
         <div className="contact-container">
           <motion.a 
             href="https://wa.me/5574988217793" 
