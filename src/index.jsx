@@ -67,23 +67,14 @@ export const Home = () => {
           <a href="#projetos">{t.navProjects}</a>
           <a href="#contato">{t.navContact}</a>
           
-          {/* Seletor de Idiomas */}
+          {/* Seletor de Idiomas com Bandeiras e Moldura */}
           <select 
+            className="lang-btn"
             value={language} 
             onChange={(e) => setLanguage(e.target.value)}
-            style={{ 
-              marginLeft: '15px', 
-              padding: '4px 8px', 
-              borderRadius: '6px', 
-              backgroundColor: 'rgba(255, 255, 255, 0.1)', 
-              color: 'inherit', 
-              border: '1px solid rgba(255, 255, 255, 0.3)', 
-              cursor: 'pointer',
-              outline: 'none'
-            }}
           >
-            <option value="pt" style={{ color: '#000' }}>PT-BR</option>
-            <option value="en" style={{ color: '#000' }}>EN</option>
+            <option value="pt">🇧🇷 PT-BR</option>
+            <option value="en">🇺🇸 EN</option>
           </select>
         </nav>
       </header>
