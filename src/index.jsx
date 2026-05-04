@@ -1,23 +1,98 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaGraduationCap, FaWhatsapp, FaEnvelope, FaHtml5, FaCss3Alt, FaGamepad, FaProjectDiagram, FaMarkdown, FaLaptopCode } from 'react-icons/fa';
 import { SiR, SiJavascript, SiPython } from 'react-icons/si';
 import { aboutData } from './data/about';
+import { LanguageProvider, LanguageContext } from './contexts/LanguageContext'; // Importando o Contexto
 import './index.css';
 import profilePic from './assets/1768608306043.jpeg';
 
+// Dicionário de traduções para os textos fixos desta página
+const translations = {
+  pt: {
+    navHome: "Início",
+    navAbout: "Sobre",
+    navProjects: "Projetos",
+    navSkills: "Habilidades",
+    navContact: "Contato",
+    greeting: "Olá, eu sou",
+    description: "Unindo a profundidade da pesquisa acadêmica com a agilidade do desenvolvimento web para construir aplicações incríveis.",
+    btnProjects: "Ver Projetos",
+    projectsTitle: "Projetos em Destaque",
+    p1Desc: "Uma plataforma focada em otimizar e enriquecer os estudos. Este projeto reflete minha paixão por unir o desenvolvimento web com a educação, aplicando metodologias de aprendizagem.",
+    p1Btn: "Acessar Projeto 🚀",
+    p2Title: "Softwares de Pesquisa Científica",
+    p2Desc: "Desenvolvi dois softwares específicos voltados para auxiliar pesquisas científicas, unindo análise de dados e minha vivência acadêmica para facilitar a investigação metodológica.",
+    p2Btn: "Ver Downloads 🔬",
+    p3Title: "Memória Silábica (Game)",
+    p3Desc: "No meu tempo livre, exploro o desenvolvimento de games pela plataforma Construct 3. Este projeto é um jogo educacional publicado na Google Play Store.",
+    p3Btn: "Ver na Play Store 🎮",
+    skillsTitle: "Minhas Habilidades",
+    contactTitle: "Vamos conversar sobre projetos?"
+  },
+  en: {
+    navHome: "Home",
+    navAbout: "About",
+    navProjects: "Projects",
+    navSkills: "Skills",
+    navContact: "Contact",
+    greeting: "Hi, I am",
+    description: "Bridging the depth of academic research with the agility of web development to build amazing applications.",
+    btnProjects: "View Projects",
+    projectsTitle: "Featured Projects",
+    p1Desc: "A platform focused on optimizing and enriching studies. This project reflects my passion for combining web development with education, applying learning methodologies.",
+    p1Btn: "Access Project 🚀",
+    p2Title: "Scientific Research Software",
+    p2Desc: "I developed two specific software aimed at assisting scientific research, combining data analysis and my academic background to facilitate methodological investigation.",
+    p2Btn: "View Downloads 🔬",
+    p3Title: "Syllabic Memory (Game)",
+    p3Desc: "In my free time, I explore game development using the Construct 3 platform. This project is an educational game published on the Google Play Store.",
+    p3Btn: "View on Play Store 🎮",
+    skillsTitle: "My Skills",
+    contactTitle: "Let's talk about projects?"
+  }
+};
+
 export const Home = () => {
+  // Puxando o idioma atual e a função de trocar do contexto
+  const { language, setLanguage } = useContext(LanguageContext);
+  
+  // Selecionando os textos corretos baseados no idioma
+  const t = translations[language];
+  
+  // Proteção: caso aboutData ainda não tenha as chaves 'pt' e 'en', ele usa o fallback
+  const currentAbout = aboutData[language] || aboutData;
+
   return (
     <>
       <header className="navbar">
-        <div className="nav-logo">&lt;{aboutData.name} /&gt;</div>
+        <div className="nav-logo">&lt;{currentAbout.name} /&gt;</div>
         <nav className="nav-links">
-          <a href="#inicio">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#contato">Contato</a>
+          <a href="#inicio">{t.navHome}</a>
+          <a href="#sobre">{t.navAbout}</a>
+          <a href="#projetos">{t.navProjects}</a>
+          <a href="#habilidades">{t.navSkills}</a>
+          <a href="#contato">{t.navContact}</a>
+          
+          {/* Seletor de Idiomas */}
+          <select 
+            value={language} 
+            onChange={(e) => setLanguage(e.target.value)}
+            style={{ 
+              marginLeft: '15px', 
+              padding: '4px 8px', 
+              borderRadius: '6px', 
+              backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+              color: 'inherit', 
+              border: '1px solid rgba(255, 255, 255, 0.3)', 
+              cursor: 'pointer',
+              outline: 'none'
+            }}
+          >
+            <option value="pt" style={{ color: '#000' }}>PT-BR</option>
+            <option value="en" style={{ color: '#000' }}>EN</option>
+          </select>
         </nav>
       </header>
 
@@ -31,14 +106,12 @@ export const Home = () => {
           <motion.div className="profile-image-container" whileHover={{ scale: 1.05 }}>
             <img src={profilePic} alt="Foto de perfil de Wennington" className="profile-image" />
           </motion.div>
-          <h1>Olá, eu sou <span className="highlight">{aboutData.name}</span> 👋</h1>
-          <h2>{aboutData.title}</h2>
-          <p>
-            Unindo a profundidade da pesquisa acadêmica com a agilidade do desenvolvimento web para construir aplicações incríveis.
-          </p>
+          <h1>{t.greeting} <span className="highlight">{currentAbout.name}</span> 👋</h1>
+          <h2>{currentAbout.title}</h2>
+          <p>{t.description}</p>
           
           <div className="cta-buttons">
-            <a href="#projetos" className="btn-primary">Ver Projetos</a>
+            <a href="#projetos" className="btn-primary">{t.btnProjects}</a>
             <a href="https://www.linkedin.com/in/wennington-dias-23201b325/" target="_blank" rel="noopener noreferrer" className="btn-secondary"><FaLinkedin /> LinkedIn</a>
             <a href="http://lattes.cnpq.br/9679218930309453" target="_blank" rel="noopener noreferrer" className="btn-secondary"><FaGraduationCap /> Lattes</a>
             <a href="https://github.com/Wennington123" target="_blank" rel="noopener noreferrer" className="btn-secondary"><FaGithub /> GitHub</a>
@@ -47,7 +120,7 @@ export const Home = () => {
       </section>
 
       <section id="projetos" className="projects-section">
-        <h2 className="section-title">Projetos em Destaque</h2>
+        <h2 className="section-title">{t.projectsTitle}</h2>
         <div className="projects-grid">
           <motion.div 
             className="project-card"
@@ -58,10 +131,8 @@ export const Home = () => {
           >
             <div className="project-info">
               <h3>GetMeP Study</h3>
-              <p>
-                Uma plataforma focada em otimizar e enriquecer os estudos. Este projeto reflete minha paixão por unir o desenvolvimento web com a educação, aplicando metodologias de aprendizagem.
-              </p>
-              <a href="https://getmep-study.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary">Acessar Projeto 🚀</a>
+              <p>{t.p1Desc}</p>
+              <a href="https://getmep-study.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p1Btn}</a>
             </div>
           </motion.div>
 
@@ -73,11 +144,9 @@ export const Home = () => {
             viewport={{ once: true }}
           >
             <div className="project-info">
-              <h3>Softwares de Pesquisa Científica</h3>
-              <p>
-                Desenvolvi dois softwares específicos voltados para auxiliar pesquisas científicas, unindo análise de dados e minha vivência acadêmica para facilitar a investigação metodológica.
-              </p>
-              <a href="https://getmep-study.vercel.app/downloads" target="_blank" rel="noopener noreferrer" className="btn-primary">Ver Downloads 🔬</a>
+              <h3>{t.p2Title}</h3>
+              <p>{t.p2Desc}</p>
+              <a href="https://getmep-study.vercel.app/downloads" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p2Btn}</a>
             </div>
           </motion.div>
 
@@ -89,18 +158,16 @@ export const Home = () => {
             viewport={{ once: true }}
           >
             <div className="project-info">
-              <h3>Memória Silábica (Game)</h3>
-              <p>
-                No meu tempo livre, exploro o desenvolvimento de games pela plataforma Construct 3. Este projeto é um jogo educacional publicado na Google Play Store.
-              </p>
-              <a href="https://play.google.com/store/apps/details?id=com.subsumeredu.game" target="_blank" rel="noopener noreferrer" className="btn-primary">Ver na Play Store 🎮</a>
+              <h3>{t.p3Title}</h3>
+              <p>{t.p3Desc}</p>
+              <a href="https://play.google.com/store/apps/details?id=com.subsumeredu.game" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p3Btn}</a>
             </div>
           </motion.div>
         </div>
       </section>
 
       <section id="habilidades" className="skills-section">
-        <h2 className="section-title">Minhas Habilidades</h2>
+        <h2 className="section-title">{t.skillsTitle}</h2>
         <div className="skills-container">
           {[
             { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
@@ -125,7 +192,7 @@ export const Home = () => {
       </section>
 
       <section id="contato" className="contact-section">
-        <h2 className="section-title">Vamos conversar sobre projetos?</h2>
+        <h2 className="section-title">{t.contactTitle}</h2>
         <div className="contact-container">
           <motion.a 
             href="https://wa.me/5574988217793" 
@@ -156,6 +223,9 @@ export const Home = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
+    {/* O LanguageProvider envolve todo o app para compartilhar o estado de idioma */}
+    <LanguageProvider>
+      <Home />
+    </LanguageProvider>
   </React.StrictMode>
 );
