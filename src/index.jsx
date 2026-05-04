@@ -11,10 +11,7 @@ import profilePic from './assets/1768608306043.jpeg';
 // Dicionário de traduções para os textos fixos desta página
 const translations = {
   pt: {
-    navHome: "Início",
-    navAbout: "Sobre",
     navProjects: "Projetos",
-    navSkills: "Habilidades",
     navContact: "Contato",
     greeting: "Olá, eu sou",
     description: "Unindo a profundidade da pesquisa acadêmica com a agilidade do desenvolvimento web para construir aplicações incríveis.",
@@ -32,10 +29,7 @@ const translations = {
     contactTitle: "Vamos conversar sobre projetos?"
   },
   en: {
-    navHome: "Home",
-    navAbout: "About",
     navProjects: "Projects",
-    navSkills: "Skills",
     navContact: "Contact",
     greeting: "Hi, I am",
     description: "Bridging the depth of academic research with the agility of web development to build amazing applications.",
@@ -69,10 +63,8 @@ export const Home = () => {
       <header className="navbar">
         <div className="nav-logo">&lt;{currentAbout.name} /&gt;</div>
         <nav className="nav-links">
-          <a href="#inicio">{t.navHome}</a>
-          <a href="#sobre">{t.navAbout}</a>
+          {/* Links reduzidos para focar no scroll da página */}
           <a href="#projetos">{t.navProjects}</a>
-          <a href="#habilidades">{t.navSkills}</a>
           <a href="#contato">{t.navContact}</a>
           
           {/* Seletor de Idiomas */}

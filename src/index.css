@@ -118,11 +118,11 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Alterado para garantir visibilidade com a cor primária */
 .highlight {
-  background: linear-gradient(to right, var(--primary-color), var(--primary-hover));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
   font-weight: 800;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
 }
 
 .hero-content h2 {
