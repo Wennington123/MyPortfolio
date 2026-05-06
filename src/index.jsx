@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaGraduationCap, FaWhatsapp, FaEnvelope, FaHtml5, FaCss3Alt, FaGamepad, FaProjectDiagram, FaMarkdown, FaLaptopCode } from 'react-icons/fa';
 import { SiR, SiJavascript, SiPython } from 'react-icons/si';
 import { aboutData } from './data/about';
-import { LanguageProvider, LanguageContext } from './contexts/LanguageContext'; // Importando o Contexto
+import { projects } from './data/projects'; 
+import { LanguageProvider, LanguageContext } from './contexts/LanguageContext';
 import './index.css';
 import profilePic from './assets/1768608306043.jpeg';
 
-// Dicionário de traduções para os textos fixos desta página
 const translations = {
   pt: {
     navProjects: "Projetos",
@@ -17,16 +17,9 @@ const translations = {
     description: "Unindo a profundidade da pesquisa acadêmica com a agilidade do desenvolvimento web para construir aplicações incríveis.",
     btnProjects: "Ver Projetos",
     projectsTitle: "Projetos em Destaque",
-    p1Desc: "Uma plataforma focada em otimizar e enriquecer os estudos. Este projeto reflete minha paixão por unir o desenvolvimento web com a educação, aplicando metodologias de aprendizagem.",
-    p1Btn: "Acessar Projeto 🚀",
-    p2Title: "Softwares de Pesquisa Científica",
-    p2Desc: "Desenvolvi dois softwares específicos voltados para auxiliar pesquisas científicas, unindo análise de dados e minha vivência acadêmica para facilitar a investigação metodológica.",
-    p2Btn: "Ver Downloads 🔬",
-    p3Title: "Memória Silábica (Game)",
-    p3Desc: "No meu tempo livre, exploro o desenvolvimento de games pela plataforma Construct 3. Este projeto é um jogo educacional publicado na Google Play Store.",
-    p3Btn: "Ver na Play Store 🎮",
     skillsTitle: "Minhas Habilidades",
-    contactTitle: "Vamos conversar sobre projetos?"
+    contactTitle: "Vamos conversar sobre projetos?",
+    btnAccessFallback: "Acessar Projeto" 
   },
   en: {
     navProjects: "Projects",
@@ -35,39 +28,25 @@ const translations = {
     description: "Bridging the depth of academic research with the agility of web development to build amazing applications.",
     btnProjects: "View Projects",
     projectsTitle: "Featured Projects",
-    p1Desc: "A platform focused on optimizing and enriching studies. This project reflects my passion for combining web development with education, applying learning methodologies.",
-    p1Btn: "Access Project 🚀",
-    p2Title: "Scientific Research Software",
-    p2Desc: "I developed two specific software aimed at assisting scientific research, combining data analysis and my academic background to facilitate methodological investigation.",
-    p2Btn: "View Downloads 🔬",
-    p3Title: "Syllabic Memory (Game)",
-    p3Desc: "In my free time, I explore game development using the Construct 3 platform. This project is an educational game published on the Google Play Store.",
-    p3Btn: "View on Play Store 🎮",
     skillsTitle: "My Skills",
-    contactTitle: "Let's talk about projects?"
+    contactTitle: "Let's talk about projects?",
+    btnAccessFallback: "Access Project"
   }
 };
 
 export const Home = () => {
-  // Puxando o idioma atual e a função de trocar do contexto
   const { language, setLanguage } = useContext(LanguageContext);
-  
-  // Selecionando os textos corretos baseados no idioma
   const t = translations[language];
-  
-  // Proteção: caso aboutData ainda não tenha as chaves 'pt' e 'en', ele usa o fallback
   const currentAbout = aboutData[language] || aboutData;
+  const currentProjects = projects[language];
 
   return (
     <>
       <header className="navbar">
         <div className="nav-logo">&lt;{currentAbout.name} /&gt;</div>
         <nav className="nav-links">
-          {/* Links reduzidos para focar no scroll da página */}
           <a href="#projetos">{t.navProjects}</a>
           <a href="#contato">{t.navContact}</a>
-          
-          {/* Seletor de Idiomas com Bandeiras e Moldura */}
           <select 
             className="lang-btn"
             value={language} 
@@ -105,47 +84,34 @@ export const Home = () => {
       <section id="projetos" className="projects-section">
         <h2 className="section-title">{t.projectsTitle}</h2>
         <div className="projects-grid">
-          <motion.div 
-            className="project-card"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <div className="project-info">
-              <h3>GetMeP Study</h3>
-              <p>{t.p1Desc}</p>
-              <a href="https://getmep-study.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p1Btn}</a>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="project-card"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="project-info">
-              <h3>{t.p2Title}</h3>
-              <p>{t.p2Desc}</p>
-              <a href="https://getmep-study.vercel.app/downloads" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p2Btn}</a>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="project-card"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <div className="project-info">
-              <h3>{t.p3Title}</h3>
-              <p>{t.p3Desc}</p>
-              <a href="https://play.google.com/store/apps/details?id=com.subsumeredu.game" target="_blank" rel="noopener noreferrer" className="btn-primary">{t.p3Btn}</a>
-            </div>
-          </motion.div>
+          {currentProjects.map((project, index) => (
+            <motion.div 
+              key={project.id}
+              className="project-card"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              {/* Adicionando a imagem do projeto no card */}
+              {project.image && (
+                <div style={{ width: '100%', height: '180px', overflow: 'hidden', borderRadius: '8px 8px 0 0', marginBottom: '15px' }}>
+                  <img src={project.image} alt={`Imagem do projeto ${project.title}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              )}
+              <div className="project-info" style={{ padding: project.image ? '0 15px 15px' : '0' }}>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tech-stack" style={{ marginBottom: '15px', fontSize: '0.85em', color: '#888', fontWeight: '500' }}>
+                    {project.techStack.join(' • ')}
+                </div>
+                {/* O botão usa a label personalizada do projects.js ou cai num texto padrão */}
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  {project.buttonLabel || t.btnAccessFallback}
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -206,7 +172,6 @@ export const Home = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* O LanguageProvider envolve todo o app para compartilhar o estado de idioma */}
     <LanguageProvider>
       <Home />
     </LanguageProvider>
