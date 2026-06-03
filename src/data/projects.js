@@ -6,6 +6,7 @@ import featherImg from '../assets/feathertranskript-preview.png';
 import vivaImg from '../assets/viva-preview.png';
 import misterAcaiImg from '../assets/mister-acai-preview.png';
 import painelIfrnImg from '../assets/painel-ifrn-preview.png';
+import dataDashImg from '../assets/data-dash-preview.jpeg';
 
 export const projects = {
   pt: [
@@ -104,6 +105,18 @@ export const projects = {
       category: "web",
       featured: true,
       buttonLabel: "Ver Repositório 💻"
+    },
+    {
+      id: 9,
+      title: "Data Dash",
+      description: "Segundo jogo publicado na Play Store, focado em desafios e entretenimento móvel.",
+      techStack: ["Game Development", "Mobile", "Play Store"],
+      repoLink: "",
+      liveLink: "https://play.google.com/store/apps/details?id=com.subsumeredu.datadash",
+      image: dataDashImg,
+      category: "mobile",
+      featured: true,
+      buttonLabel: "Ver na Play Store 🎮"
     }
   ],
   en: [
@@ -202,6 +215,18 @@ export const projects = {
       category: "web",
       featured: true,
       buttonLabel: "View Repository 💻"
+    },
+    {
+      id: 9,
+      title: "Data Dash",
+      description: "Second game published on the Play Store, focused on mobile challenges and entertainment.",
+      techStack: ["Game Development", "Mobile", "Play Store"],
+      repoLink: "",
+      liveLink: "https://play.google.com/store/apps/details?id=com.subsumeredu.datadash",
+      image: dataDashImg,
+      category: "mobile",
+      featured: true,
+      buttonLabel: "View on Play Store 🎮"
     }
   ]
 };
