@@ -3,11 +3,9 @@ import wikiendumImg from '../assets/wikiendum-preview.png';
 import memoriaImg from '../assets/memoria-preview.png';
 import flowstudioImg from '../assets/flowstudio-preview.png';
 import featherImg from '../assets/feathertranskript-preview.png';
-
-// TODO: Adicionar imagens reais para os novos projetos em src/assets/ e importar aqui
-// import vivaImg from '../assets/viva-preview.png';
-// import misterAcaiImg from '../assets/mister-acai-preview.png';
-// import painelIfrnImg from '../assets/painel-ifrn-preview.png';
+import vivaImg from '../assets/viva-preview.png';
+import misterAcaiImg from '../assets/mister-acai-preview.png';
+import painelIfrnImg from '../assets/painel-ifrn-preview.png';
 
 export const projects = {
   pt: [
@@ -78,7 +76,7 @@ export const projects = {
       techStack: ["HTML", "CSS", "JavaScript"],
       repoLink: "https://github.com/Wennington123/projeto-viva-ong",
       liveLink: "https://github.com/Wennington123/projeto-viva-ong",
-      image: getmepImg, // TODO: Substituir por imagem real (ex: vivaImg)
+      image: vivaImg,
       category: "web",
       featured: true,
       buttonLabel: "Ver Repositório 💻"
@@ -90,7 +88,7 @@ export const projects = {
       techStack: ["JavaScript", "HTML", "CSS"],
       repoLink: "https://github.com/Wennington123/cardapiomisteracai",
       liveLink: "https://github.com/Wennington123/cardapiomisteracai",
-      image: getmepImg, // TODO: Substituir por imagem real (ex: misterAcaiImg)
+      image: misterAcaiImg,
       category: "web",
       featured: true,
       buttonLabel: "Ver Repositório 💻"
@@ -102,7 +100,7 @@ export const projects = {
       techStack: ["HTML", "CSS", "Educação a Distância"],
       repoLink: "https://github.com/Wennington123/Painel-Autobiogr-fico_IFRN",
       liveLink: "https://github.com/Wennington123/Painel-Autobiogr-fico_IFRN",
-      image: getmepImg, // TODO: Substituir por imagem real (ex: painelIfrnImg)
+      image: painelIfrnImg,
       category: "web",
       featured: true,
       buttonLabel: "Ver Repositório 💻"
@@ -176,7 +174,7 @@ export const projects = {
       techStack: ["HTML", "CSS", "JavaScript"],
       repoLink: "https://github.com/Wennington123/projeto-viva-ong",
       liveLink: "https://github.com/Wennington123/projeto-viva-ong",
-      image: getmepImg, // TODO: Replace with real image (e.g., vivaImg)
+      image: vivaImg,
       category: "web",
       featured: true,
       buttonLabel: "View Repository 💻"
@@ -188,7 +186,7 @@ export const projects = {
       techStack: ["JavaScript", "HTML", "CSS"],
       repoLink: "https://github.com/Wennington123/cardapiomisteracai",
       liveLink: "https://github.com/Wennington123/cardapiomisteracai",
-      image: getmepImg, // TODO: Replace with real image (e.g., misterAcaiImg)
+      image: misterAcaiImg,
       category: "web",
       featured: true,
       buttonLabel: "View Repository 💻"
@@ -200,7 +198,7 @@ export const projects = {
       techStack: ["HTML", "CSS", "Distance Education"],
       repoLink: "https://github.com/Wennington123/Painel-Autobiogr-fico_IFRN",
       liveLink: "https://github.com/Wennington123/Painel-Autobiogr-fico_IFRN",
-      image: getmepImg, // TODO: Replace with real image (e.g., painelIfrnImg)
+      image: painelIfrnImg,
       category: "web",
       featured: true,
       buttonLabel: "View Repository 💻"
