@@ -5,7 +5,7 @@ import {
   FaGithub, FaLinkedin, FaGraduationCap, FaWhatsapp, FaEnvelope,
   FaHtml5, FaCss3Alt, FaGamepad, FaProjectDiagram, FaMarkdown,
   FaLaptopCode, FaRobot, FaCode, FaServer, FaTools, FaFlask,
-  FaUsers, FaExternalLinkAlt, FaGithub as FaGithubIcon
+  FaUsers, FaExternalLinkAlt, FaGithub as FaGithubIcon, FaGitlab
 } from 'react-icons/fa';
 import { SiR, SiJavascript, SiPython, SiReact, SiVite, SiNodedotjs, SiOpenai } from 'react-icons/si';
 import { aboutData } from './data/about';
@@ -331,6 +331,30 @@ export const Home = () => {
             <FaEnvelope className="contact-icon" />
             <span>wenningtondiasx25@gmail.com</span>
           </a>
+        </div>
+        <div className="social-links">
+          {(() => {
+            const social = currentAbout.socialLinks || {};
+            const icons = {
+              linkedin: <FaLinkedin />,
+              github: <FaGithubIcon />,
+              gitlab: <FaGitlab />,
+              lattes: "Lattes",
+              portfolio: "Site"
+            };
+            return Object.entries(social).map(([key, url]) => (
+              <a
+                key={key}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label={key}
+              >
+                {icons[key] || key}
+              </a>
+            ));
+          })()}
         </div>
       </section>
     </>

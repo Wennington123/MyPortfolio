@@ -7,6 +7,10 @@ import vivaImg from '../assets/viva-preview.png';
 import misterAcaiImg from '../assets/mister-acai-preview.png';
 import painelIfrnImg from '../assets/painel-ifrn-preview.png';
 import dataDashImg from '../assets/data-dash-preview.jpeg';
+import wTecImg from '../assets/w-tec-preview.svg';
+import quartoTemplatesImg from '../assets/quarto-templates-preview.svg';
+import euLiterarioImg from '../assets/eu-literario-tom-preview.svg';
+import psyMapImg from '../assets/psymap-preview.svg';
 
 export const projects = {
   pt: [
@@ -14,8 +18,8 @@ export const projects = {
       id: 1,
       title: "GetMep Study",
       description: "Plataforma representante do Grupo de Estudos Teórico-Metodológicos em Pesquisa e Educação. Inclui painel web interativo para análise de dados (PRISMA 2020). Desenvolvida com foco na experiência do usuário e deploy contínuo.",
-      techStack: ["Python", "JavaScript", "CSS", "R", "HTML", "Shiny"],
-      repoLink: "https://github.com/wdaquino/getmep-study",
+      techStack: ["TypeScript", "Python", "JavaScript", "CSS", "R", "HTML", "Shiny"],
+      repoLink: "https://github.com/Wennington123/getmep-study",
       liveLink: "https://getmep.shinyapps.io/prisma2020-ptbr/",
       image: getmepImg,
       category: "web",
@@ -26,8 +30,8 @@ export const projects = {
       id: 2,
       title: "Wikiendum",
       description: "Dicionário colaborativo focado em mapear a literatura acadêmica. O projeto centraliza múltiplas definições de termos complexos nas ciências humanas, evidenciando como diferentes autores e escolas de pensamento interpretam o mesmo fenômeno.",
-      techStack: ["React", "JavaScript", "CSS", "Vite", "Node.js", "HTML"],
-      repoLink: "https://github.com/wdaquino/wikiendum",
+      techStack: ["TypeScript", "React", "JavaScript", "CSS", "Vite", "Node.js", "HTML"],
+      repoLink: "https://github.com/Wennington123/wikiendum",
       liveLink: "https://wikiendum.vercel.app/",
       image: wikiendumImg,
       category: "web",
@@ -117,6 +121,54 @@ export const projects = {
       category: "mobile",
       featured: true,
       buttonLabel: "Ver na Play Store 🎮"
+    },
+    {
+      id: 10,
+      title: "w-tec",
+      description: "Presença web e projetos de desenvolvimento, reunindo experimentos e entregas em HTML, CSS e JavaScript para a web.",
+      techStack: ["HTML", "CSS", "JavaScript", "Git"],
+      repoLink: "https://github.com/Wennington123/w-tec",
+      liveLink: "https://github.com/Wennington123/w-tec",
+      image: wTecImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "Ver Repositório 💻"
+    },
+    {
+      id: 11,
+      title: "Quarto Templates pt-BR",
+      description: "Coleção de templates Quarto para pesquisadores brasileiros escreverem trabalhos em português — reúne modelos de periódicos e universidades do Brasil.",
+      techStack: ["JavaScript", "Quarto", "LaTeX", "R", "Pesquisa"],
+      repoLink: "https://github.com/Wennington123/quarto_templates_ptbr",
+      liveLink: "https://github.com/Wennington123/quarto_templates_ptbr",
+      image: quartoTemplatesImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "Ver Repositório 💻"
+    },
+    {
+      id: 12,
+      title: "Eu Literário (Tom)",
+      description: "Site pessoal artístico dedicado à arte escrita — palavra por palavra. Um espaço literário para poesia e prosa autorais.",
+      techStack: ["CSS", "HTML", "Literatura"],
+      repoLink: "https://github.com/Wennington123/Eu-Literario-Tom",
+      liveLink: "https://github.com/Wennington123/Eu-Literario-Tom",
+      image: euLiterarioImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "Ver Repositório 💻"
+    },
+    {
+      id: 13,
+      title: "PsyMap (GitLab)",
+      description: "Projeto de mapeamento e visualização de conhecimento em psicologia, hospedado no GitLab como parte do meu trabalho multiplataforma.",
+      techStack: ["GitLab", "Data Visualization", "JavaScript"],
+      repoLink: "https://gitlab.com/wenningtondiasx25/psymap",
+      liveLink: "https://gitlab.com/wenningtondiasx25/psymap",
+      image: psyMapImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "Ver no GitLab 🦊"
     }
   ],
   en: [
@@ -124,8 +176,8 @@ export const projects = {
       id: 1,
       title: "GetMep Study",
       description: "Representative platform of the Theoretical-Methodological Study Group in Research and Education. Includes an interactive web panel for data analysis (PRISMA 2020). Developed with a focus on user experience and continuous deployment.",
-      techStack: ["Python", "JavaScript", "CSS", "R", "HTML", "Shiny"],
-      repoLink: "https://github.com/wdaquino/getmep-study",
+      techStack: ["TypeScript", "Python", "JavaScript", "CSS", "R", "HTML", "Shiny"],
+      repoLink: "https://github.com/Wennington123/getmep-study",
       liveLink: "https://getmep.shinyapps.io/prisma2020-ptbr/",
       image: getmepImg,
       category: "web",
@@ -136,8 +188,8 @@ export const projects = {
       id: 2,
       title: "Wikiendum",
       description: "A collaborative dictionary focused on mapping academic literature. The project centralizes multiple definitions of complex terms in the humanities, highlighting how different authors and schools of thought interpret the same phenomenon.",
-      techStack: ["React", "JavaScript", "CSS", "Vite", "Node.js", "HTML"],
-      repoLink: "https://github.com/wdaquino/wikiendum",
+      techStack: ["TypeScript", "React", "JavaScript", "CSS", "Vite", "Node.js", "HTML"],
+      repoLink: "https://github.com/Wennington123/wikiendum",
       liveLink: "https://wikiendum.vercel.app/",
       image: wikiendumImg,
       category: "web",
@@ -227,6 +279,54 @@ export const projects = {
       category: "mobile",
       featured: true,
       buttonLabel: "View on Play Store 🎮"
+    },
+    {
+      id: 10,
+      title: "w-tec",
+      description: "Web presence and development projects, gathering experiments and deliverables in HTML, CSS and JavaScript for the web.",
+      techStack: ["HTML", "CSS", "JavaScript", "Git"],
+      repoLink: "https://github.com/Wennington123/w-tec",
+      liveLink: "https://github.com/Wennington123/w-tec",
+      image: wTecImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "View Repository 💻"
+    },
+    {
+      id: 11,
+      title: "Quarto Templates pt-BR",
+      description: "A collection of Quarto templates for Brazilian researchers to write their work in Portuguese — gathering journal and university models from Brazil.",
+      techStack: ["JavaScript", "Quarto", "LaTeX", "R", "Research"],
+      repoLink: "https://github.com/Wennington123/quarto_templates_ptbr",
+      liveLink: "https://github.com/Wennington123/quarto_templates_ptbr",
+      image: quartoTemplatesImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "View Repository 💻"
+    },
+    {
+      id: 12,
+      title: "Eu Literário (Tom)",
+      description: "Artistic personal site dedicated to written art — word by word. A literary space for original poetry and prose.",
+      techStack: ["CSS", "HTML", "Literature"],
+      repoLink: "https://github.com/Wennington123/Eu-Literario-Tom",
+      liveLink: "https://github.com/Wennington123/Eu-Literario-Tom",
+      image: euLiterarioImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "View Repository 💻"
+    },
+    {
+      id: 13,
+      title: "PsyMap (GitLab)",
+      description: "A knowledge mapping and visualization project in psychology, hosted on GitLab as part of my multi-platform work.",
+      techStack: ["GitLab", "Data Visualization", "JavaScript"],
+      repoLink: "https://gitlab.com/wenningtondiasx25/psymap",
+      liveLink: "https://gitlab.com/wenningtondiasx25/psymap",
+      image: psyMapImg,
+      category: "web",
+      featured: false,
+      buttonLabel: "View on GitLab 🦊"
     }
   ]
 };

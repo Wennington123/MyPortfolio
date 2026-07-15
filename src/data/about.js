@@ -10,6 +10,7 @@ export const aboutData = {
       linkedin: "https://www.linkedin.com/in/wennington-dias-23201b325/",
       lattes: "http://lattes.cnpq.br/9679218930309453",
       github: "https://github.com/Wennington123",
+      gitlab: "https://gitlab.com/wenningtondiasx25",
       portfolio: "https://getmep-study.vercel.app/"
     }
   },
@@ -24,6 +25,7 @@ export const aboutData = {
       linkedin: "https://www.linkedin.com/in/wennington-dias-23201b325/",
       lattes: "http://lattes.cnpq.br/9679218930309453",
       github: "https://github.com/Wennington123",
+      gitlab: "https://gitlab.com/wenningtondiasx25",
       portfolio: "https://getmep-study.vercel.app/"
     }
   }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2027"/>
+      <stop offset="50%" stop-color="#203a43"/>
+      <stop offset="100%" stop-color="#2c5364"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g)"/>
+  <g fill="none" stroke="#00f2fe" stroke-width="2" opacity="0.5">
+    <circle cx="640" cy="90" r="120"/>
+    <circle cx="640" cy="90" r="80"/>
+    <circle cx="640" cy="90" r="40"/>
+  </g>
+  <text x="60" y="210" font-family="monospace" font-size="56" font-weight="bold" fill="#ffffff">w-tec</text>
+  <text x="62" y="260" font-family="monospace" font-size="24" fill="#00f2fe">&lt;/&gt; desenvolvimento web</text>
+</svg>
