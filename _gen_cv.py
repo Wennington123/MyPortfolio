@@ -42,7 +42,7 @@ def build(lang, out_path):
         contacts = [
             'E-mail: <a href="mailto:wenningtondiasx25@gmail.com">wenningtondiasx25@gmail.com</a> &nbsp;|&nbsp; (74) 98821-7793',
             'LinkedIn: <a href="https://www.linkedin.com/in/wennington-dias-23201b325/">linkedin.com/in/wennington-dias-23201b325</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/Wennington123">github.com/Wennington123</a> &nbsp;|&nbsp; GitLab: <a href="https://gitlab.com/wenningtondiasx25">gitlab.com/wenningtondiasx25</a>',
-            'Lattes: <a href="http://lattes.cnpq.br/9679218930309453">lattes.cnpq.br/9679218930309453</a> &nbsp;|&nbsp; Portfolio: <a href="https://getmep-study.vercel.app/">getmep-study.vercel.app</a>',
+            'Lattes: <a href="http://lattes.cnpq.br/9679218930309453">lattes.cnpq.br/9679218930309453</a> &nbsp;|&nbsp; Portfolio: <a href="https://wenningtonport.vercel.app/">wenningtonport.vercel.app</a>',
         ]
         summary = ("Desenvolvedor júnior apaixonado por tecnologia, com sólida bagagem acadêmica em "
                    "pesquisa e educação. Especializado em construir interfaces web acessíveis e dinâmicas, "
@@ -91,7 +91,7 @@ def build(lang, out_path):
             "Inteligência Artificial: Fundamentos, Aplicações e Criatividade — IFSul (20h)",
             "Curso Kotlin Games — desenvolvimento de jogos",
         ]
-        footer = "Currículo gerado a partir do portfólio pessoal · getmep-study.vercel.app"
+        footer = "Currículo gerado a partir do portfólio pessoal · wenningtonport.vercel.app"
     else:
         st_name   = S("name", fontName="DJ-B", fontSize=18, textColor=DARK, spaceAfter=2, leading=21)
         st_title  = S("title", fontName="DJ-B", fontSize=12, textColor=PRIMARY, spaceAfter=6)
@@ -106,7 +106,7 @@ def build(lang, out_path):
         contacts = [
             'E-mail: <a href="mailto:wenningtondiasx25@gmail.com">wenningtondiasx25@gmail.com</a> &nbsp;|&nbsp; +55 (74) 98821-7793',
             'LinkedIn: <a href="https://www.linkedin.com/in/wennington-dias-23201b325/">linkedin.com/in/wennington-dias-23201b325</a> &nbsp;|&nbsp; GitHub: <a href="https://github.com/Wennington123">github.com/Wennington123</a> &nbsp;|&nbsp; GitLab: <a href="https://gitlab.com/wenningtondiasx25">gitlab.com/wenningtondiasx25</a>',
-            'Lattes: <a href="http://lattes.cnpq.br/9679218930309453">lattes.cnpq.br/9679218930309453</a> &nbsp;|&nbsp; Portfolio: <a href="https://getmep-study.vercel.app/">getmep-study.vercel.app</a>',
+            'Lattes: <a href="http://lattes.cnpq.br/9679218930309453">lattes.cnpq.br/9679218930309453</a> &nbsp;|&nbsp; Portfolio: <a href="https://wenningtonport.vercel.app/">wenningtonport.vercel.app</a>',
         ]
         summary = ("Junior developer passionate about technology, with a solid academic background in "
                   "research and education. Specialized in building accessible and dynamic web interfaces, "
@@ -155,7 +155,7 @@ def build(lang, out_path):
             "Artificial Intelligence: Fundamentals, Applications & Creativity — IFSul (20h)",
             "Kotlin Games — game development",
         ]
-        footer = "Resume generated from the personal portfolio · getmep-study.vercel.app"
+        footer = "Resume generated from the personal portfolio · wenningtonport.vercel.app"
 
     doc = SimpleDocTemplate(out_path, pagesize=A4,
                             leftMargin=18*mm, rightMargin=18*mm,

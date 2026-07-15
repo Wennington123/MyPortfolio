@@ -11,7 +11,7 @@ export const aboutData = {
       lattes: "http://lattes.cnpq.br/9679218930309453",
       github: "https://github.com/Wennington123",
       gitlab: "https://gitlab.com/wenningtondiasx25",
-      portfolio: "https://getmep-study.vercel.app/"
+      portfolio: "https://wenningtonport.vercel.app/"
     }
   },
   en: {
@@ -26,7 +26,7 @@ export const aboutData = {
       lattes: "http://lattes.cnpq.br/9679218930309453",
       github: "https://github.com/Wennington123",
       gitlab: "https://gitlab.com/wenningtondiasx25",
-      portfolio: "https://getmep-study.vercel.app/"
+      portfolio: "https://wenningtonport.vercel.app/"
     }
   }
 };
