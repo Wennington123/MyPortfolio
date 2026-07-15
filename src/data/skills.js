@@ -3,22 +3,22 @@ export const skills = {
     {
       category: "Front-end",
       icon: "code",
-      items: ["HTML5", "CSS3", "JavaScript", "React", "Vite"]
+      items: ["HTML5", "CSS3", "JavaScript", "React", "Vite", "Kotlin (Games)"]
     },
     {
       category: "Back-end & Dados",
       icon: "server",
-      items: ["Python", "Node.js", "R", "SQL"]
+      items: ["Python", "Python (IA Aplicada)", "Node.js", "R", "SQL", "Oracle Cloud (OCI)"]
     },
     {
       category: "IA & Automação",
       icon: "bot",
-      items: ["Claude Code", "OpenAI API", "Whisper AI", "Automação de Prompts"]
+      items: ["Claude Code", "OpenAI API", "Whisper AI", "Automação de Prompts", "Agentes de IA (LangGraph)", "n8n (Automação)", "LangChain", "Gemini", "Engenharia de Software com IA"]
     },
     {
       category: "Ferramentas",
       icon: "tools",
-      items: ["Git", "GitHub", "Vercel", "NPM/Yarn", "Figma"]
+      items: ["Git", "GitHub", "Vercel", "NPM/Yarn", "Figma", "Canva", "Word", "Microsoft"]
     },
     {
       category: "Pesquisa & Métodos",
@@ -35,22 +35,22 @@ export const skills = {
     {
       category: "Front-end",
       icon: "code",
-      items: ["HTML5", "CSS3", "JavaScript", "React", "Vite"]
+      items: ["HTML5", "CSS3", "JavaScript", "React", "Vite", "Kotlin (Games)"]
     },
     {
       category: "Back-end & Data",
       icon: "server",
-      items: ["Python", "Node.js", "R", "SQL"]
+      items: ["Python", "Python (AI Applied)", "Node.js", "R", "SQL", "Oracle Cloud (OCI)"]
     },
     {
       category: "AI & Automation",
       icon: "bot",
-      items: ["Claude Code", "OpenAI API", "Whisper AI", "Prompt Engineering"]
+      items: ["Claude Code", "OpenAI API", "Whisper AI", "Prompt Engineering", "AI Agents (LangGraph)", "n8n (Automation)", "LangChain", "Gemini", "AI Software Engineering"]
     },
     {
       category: "Tools",
       icon: "tools",
-      items: ["Git", "GitHub", "Vercel", "NPM/Yarn", "Figma"]
+      items: ["Git", "GitHub", "Vercel", "NPM/Yarn", "Figma", "Canva", "Word", "Microsoft"]
     },
     {
       category: "Research & Methods",
